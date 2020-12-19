@@ -63,3 +63,61 @@ function randomPassType() {
 
 // make a boolean array of types (upper, lower, numer, or special) of characters user specifies
 var passTypes = []
+// how many characters user specified for password length (user prompt) - variable is sent to while loop "mainPassword"
+var chooseLength = 0
+function askUser() {
+    chooseLength = prompt("How many characters would you like in your password? Choose from 8 to 128");
+    if ((chooseLength < 8) || (chooseLength > 128)) {
+        alert("please choose between 8 and 128 characters!")
+        askUser();
+    }
+}
+
+// make an array of types of characters user specifies (boolean)
+var passTypes = []
+
+// call funtion to begin user prompts
+askUser();
+
+// call function to  
+askCase();
+
+function askCase() {
+    passTypes = [];
+    // confirm if upper case letters should be included
+    var useUpper = confirm("Would you like to include upper case letters?")
+    if (useUpper === true) {
+        passTypes.push(true)
+    } else {
+        passTypes.push(false)
+    }
+
+    // confirm if lower case letters should be included
+    var useLower = confirm("Would you like to include lower case letters?")
+    if (useLower === true) {
+        passTypes.push(true)
+    } else {
+        passTypes.push(false)
+    }
+
+    // confirm if numerals should be included
+    var useNumer = confirm("Would you like to include numerals?")
+    if (useNumer === true) {
+        passTypes.push(true)
+    } else {
+        passTypes.push(false)
+    }
+
+    // confirm if special characters should be included
+    var useSpec = confirm("Would you like to include special characters?")
+    if (useSpec === true) {
+        passTypes.push(true)
+    } else {
+        passTypes.push(false)
+    }
+}
+
+// this is to make sure the user chooses at least one type - at the moment cannot seem to return with a clean array
+while (!passTypes.includes(true)) {
+    alert("You need select at least one kind of character!");
+    askCase();

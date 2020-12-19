@@ -150,3 +150,6 @@ while (mainPassword.length < chooseLength) {
         }
     }
 }
+
+// return concatenated password from array with no separators
+var finalPassword = mainPassword.join('');

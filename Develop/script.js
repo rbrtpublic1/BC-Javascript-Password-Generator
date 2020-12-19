@@ -121,3 +121,32 @@ function askCase() {
 while (!passTypes.includes(true)) {
     alert("You need select at least one kind of character!");
     askCase();
+}
+
+// start of the main loop that reflects number of characters in password - 
+
+// need a loop or function that generates a random number between 0 and 3 then check if that index is false and tries again until the main loop completes
+
+var mainPassword = []
+
+while (mainPassword.length < chooseLength) {
+
+    var passTypeResult = randomPassType()
+
+    // Cannot get an evaluation made that says to run function again if not true
+    if (passTypes[passTypeResult] === true) {
+
+        //  below works to push, or populate the mainPassword array
+        if (passTypeResult === 0) {
+            mainPassword.push(upperCase[randomInteger(0, upperCase.length)])
+        } else if
+            (passTypeResult === 1) {
+            mainPassword.push(lowerCase[randomInteger(0, lowerCase.length)])
+        } else if
+            (passTypeResult === 2) {
+            mainPassword.push(numerCase[randomInteger(0, numerCase.length)])
+        } else {
+            mainPassword.push(specCase[randomInteger(0, specCase.length)])
+        }
+    }
+}

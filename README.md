@@ -97,4 +97,4 @@ This project is licensed under the MIT License
 
 ### Acknowledgments
 
-* Thank you to M. Nunez for the late-hour consultation!
+* Thank you to M.N. for the late-hour consultation!

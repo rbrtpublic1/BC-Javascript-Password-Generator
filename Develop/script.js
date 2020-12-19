@@ -51,3 +51,12 @@ var numerCase = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 // make a specCase array
 var specCase = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ".", ","]
 
+
+// Make a random number generator for selecting characters within each array
+function randomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+// make a random number generator function for selecting passType array indexes
+function randomPassType() {
+    return randomInteger(0, 4);
+}

@@ -60,3 +60,6 @@ function randomInteger(min, max) {
 function randomPassType() {
     return randomInteger(0, 4);
 }
+
+// make a boolean array of types (upper, lower, numer, or special) of characters user specifies
+var passTypes = []
